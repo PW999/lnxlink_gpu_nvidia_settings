@@ -32,7 +32,7 @@ class Addon():
 
     def __init__(self, lnxlink):
         """Setup addon, discover all GPUs"""
-        self.name = 'GPU'
+        self.name = 'GPUNvidiaSettings'
         if which("nvidia-settings") is None:
             logger.warning("nvidia-settings was not found on the PATH")
         self.gpu_ids = self.__get_gpus()

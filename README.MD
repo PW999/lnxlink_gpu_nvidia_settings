@@ -3,8 +3,6 @@
 This module for [LNXLink](https://github.com/bkbilly/lnxlink) is a drop-in replacement for the bundeled GPU module.
 It uses `nvidia-settings` instead of `nvidia-smi` which might give better results on some (older) Nvidia GPUs.
 
-Since this is a drop-in replacement, it'll use the same identifiers, thus it can not be used toghether with the 'gpu' module.
-
 ## How to use
 You'll only need [gpu_nvidia_settings.py](gpu_nvidia_settings.py). There's no limitations on where you place the file,
 it might depend on where and how you've installed [LNXLink](https://github.com/bkbilly/lnxlink), but it'll work fine
