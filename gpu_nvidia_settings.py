@@ -75,7 +75,7 @@ class Addon():
             metrics = self.__get_metrics(gpu[GPU_QUERY_NAME])
             gpus[f"nvidia_{gpu_id}"] = {
                 "name": gpu[GPU_NAME],
-                "Memory usage": float(round(100 * (metrics['UsedDedicatedGPUMemory']/metrics['TotalDedicatedGPUMemory']) , 0)),
+                "Memory usage": float(round(100 * (metrics['UsedDedicatedGPUMemory']/max(metrics['TotalDedicatedGPUMemory'], 1)) , 0)),
                 "load": min(100, round(metrics['GPUUtilization'], 1)),
                 "Temperature": metrics['GPUCoreTemp'],
             }
